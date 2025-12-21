@@ -35,7 +35,7 @@ browserAPI.alarms.onAlarm.addListener(async (alarm) => {
       await browserAPI.tabs.remove(tabs[0].id);
 
       // Open new tab with same URL (in background)
-      await browserAPI.tabs.create({ url: tabUrl, active: false });
+      await browserAPI.tabs.create({ url: tabUrl, active: true });
     } else {
       console.log('[Background] No vault.chia.net tab found');
     }
